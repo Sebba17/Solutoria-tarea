@@ -2,7 +2,7 @@
 
 header('Content-Type: application/json');
 
-// Set up the ORM library
+// ORM libreria
 require_once('config.php');
 
 if (isset($_GET['start']) AND isset($_GET['end'])) {
@@ -11,7 +11,7 @@ if (isset($_GET['start']) AND isset($_GET['end'])) {
 	$end = $_GET['end'];
 	$data = array();
 
-	// Select the results with Idiorm
+	// Seleccion de resultados con idiorm
 	$results = ORM::for_table('uf')
 			->where_gte('fechaIndicador', $start)
 			->where_lte('fechaIndicador', $end)
@@ -19,7 +19,7 @@ if (isset($_GET['start']) AND isset($_GET['end'])) {
 			->find_array();
 
 
-	// Build a new array with the data
+	// construimos un nuevo arreglo con los datos
 	foreach ($results as $key => $value) {
 		$data[$key]['label'] = $value['fechaIndicador'];
 		$data[$key]['value'] = $value['valorIndicador'];

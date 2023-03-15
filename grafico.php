@@ -1,3 +1,4 @@
+<? //Diseño del grafico ?>
 <!doctype html>
 <html lang="es">
   <head>
@@ -54,7 +55,7 @@ function myFunction() {
 
    
 
-    <!-- Begin page content -->
+   
 
 <div class="container" >
  <h3 class="mt-5">Gráfico historico UF</h3>
@@ -99,7 +100,7 @@ function myFunction() {
 
 
 
-</div><!-- Fin row -->
+</div>
 
 
 
